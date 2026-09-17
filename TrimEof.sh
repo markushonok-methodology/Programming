@@ -2,6 +2,11 @@
 
 set -euo pipefail
 
+if (( $# == 0 )); then
+	echo "Usage: ${0##*/} <pathspec> [<pathspec> ...]" >&2
+	exit 2
+fi
+
 root="$(git rev-parse --show-toplevel)"
 cd "$root"
 
@@ -20,7 +25,7 @@ trim()
 while IFS= read -r -d '' file; do
 	trim "$file"
 done < <(
-	git diff --name-only -z --diff-filter=ACMR
-	git diff --cached --name-only -z --diff-filter=ACMR
-	git ls-files --others --exclude-standard -z
+	git diff --name-only -z --diff-filter=ACMR -- "$@"
+	git diff --cached --name-only -z --diff-filter=ACMR -- "$@"
+	git ls-files --others --exclude-standard -z -- "$@"
 )

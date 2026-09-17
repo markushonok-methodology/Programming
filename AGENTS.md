@@ -60,4 +60,4 @@ Before reporting the task as complete:
 2. Identify the topics applicable to the final diff.
 3. Verify the diff against every applicable topic.
 4. Resolve every violation or report it explicitly.
-5. Run `<programming>/TrimEof.sh` from `<project>`.
+5. Run `<project>/TrimEof.sh`.
