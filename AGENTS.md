@@ -48,6 +48,7 @@ Treat canonical examples as demonstrations of how the applicable principles comp
 | `Naming.*` | Introducing or renaming a symbol |
 | `Ordering.*` | Adding, removing, or reordering declarations within a type or top-level type declarations within a source file, or introducing or changing a dependency between such declarations |
 | `Reflection.*` | Adding runtime type inspection, downcasting, or reflection |
+| `SourceDocumentation.*` | Adding or changing an exposed declaration, its externally observable contract, or its XML documentation |
 | `Testing.*` | Changing observable behavior or fixing a defect |
 
 A topic becomes applicable because of the implementation being performed, not only because of the wording of the original task.
