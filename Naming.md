@@ -1,5 +1,9 @@
 # Naming Entities
 
+Name a type in the singular. A type denotes one instance of what it represents; a collection of such instances is represented by a member or a separate type.
+
+An enum used as a set of flags is the exception and is named in the plural.
+
 Name entities after what they **are**, not what they **do**.
 
 Names such as `Handler`, `Processor`, `Validator`, `Sorter`, and `Builder` are **moderate smells** when they merely describe performers of actions.
